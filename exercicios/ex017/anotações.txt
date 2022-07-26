@@ -1,0 +1,39 @@
+para mexer com as fontes em css, precisamos fazer o mesmo esquema de inserir tipos diferentes de arquivos para determinados dispositivos, porém dessa vez, com nomes de fontes que sejam compatíveis em css.
+dentro da folha avulsa de css, iremos configurar a tag <body> para o seletor (declaração)"font-family". dentro deste seletor, iremos inserir o valor com o nome das fontes escolhidas , podemos escolher até 3.
+se quiser fontes sem serifa, é recomendado usar as fontes "Arial, Helvetica, sans-serif" pois são fontes que a maioria dos dispositivos irão ler. no caso da sans-serif-, o navegador irá escolher uma fonte aleatória que não seja serifada.
+se precisar de uma fonte com serifa, é recomendado usar fontes commo "Times-New-Roman", seguido de serif.
+se for fonte monoespaçada, basta escolher a fonte 'courier new, courier, monospace'
+existem vários tipos de medidas, sendo as absolutas e as relativas. as unicas que devemos usar segundo o prof. são as medidas px e em, a medida px padrão são 16px, para cada 16px temos 1em, se colocarmos 2em teremos 32px, ou seja, o dobro.
+para indicar o peso da fonte, usamos o seletor font-weight, com esse seletor nós escolhemos o quão "gorda" a fonte será, os valores aceitos serão lighter (magra), normal, bold (mais cheia) e bolder (bem gorda), também podemos usar as variações numéricas, que irá de 100 até 900, sendo mais versátil para escolher os tamanhos pois tem mais possibilidades, porém precisa ver se a fonte está disponível para a variação de peso.
+como as formatações em css são basicamente o assunto mais importante da linguagem, podemos usar seletores que funcionam como atalhos, chamados de shorthand.
+ao invés de ficar colocando várias declarações de fontes no seletor, nós colocaremos a shorthand que vai simplificar tudo, porém existe uma ordem de atributos a ser seguida:
+-font-style - 
+-font-variant
+-font-weight
+-font-size/line-height
+-font-family
+o seletor shorthand é apenas "font"
+para inserirmos fontes externas, podemos usar o google fonts para pesquisar uma fonte que não está instalada em nossa maquina, selecionaremos a fonte escolhida e clicaremos em "import", dentro do documento css, iremos inserir o código a partir de "@import". 
+no documento css, também colocaremos a "font-family" com o nome oficial do google fonts, esse nome aparecerá logo abaixo da caixa "import", em "CSS rules to specify families".
+para  inserir fontes baixadas de outro lugar que não seja o google fonts, iremos baixar o arquivo .otf ou .ttf na pasta do documento html que está sendo escrito. 
+iremos inserir no doc css a ORDEM "@font-face", da seguinte forma:
+@font-face {
+font-family: 'nome';
+src: url(pasta/nomedafonte.otf;
+font-weight: normal;
+font-style: normal;
+}
+depois de inserido como ordem no doc, basta escolher as tags do cod. html que desejemos que serão usadas na fonte escolhida, claro que sempre seguido de outra fonte que já existe na máquina se tudo der errado com a fonte baixada.
+para dar espaço no início dos parágrafos, usaremos a declaração "text-indent" seguido do valor em px escolhido para ser espaçado. o nome disso é indentação.
+nas css, quando escolhemos uma configuração para uma determidada tag, todas as outras tags que tiverem o mesmo nome irão tomar as configurações que você escolheu, então quando queremos configurar apenas um texto que está dentro de uma tag que existem outras mesmas tags no documento, usamos seletores especiais, identificadores, então ficará mais eficiente para configurar o título escolhido.
+os seletores identificadores são chamados de id, e colocaremos esse id dentro da tag escolhida no cod. html, ex: "<h1 id="principal"------</h1>
+
+para configurar esse id, usaremos o seletor especial com um #na frente, ex: #principal {------}, escolhendo as configurações para colocar apenas neste seletor
+tudo que em HTML é "id", em CSS será "#"
+tudo que em HTML é "class", em CSS será um ponto
+em "id", só podemos usar um elemento por página e em "class" podemos usar vários elementos
+a tag div serve para separar e alinhar elementos dentro de um documento html, tecnicamente sem nenhuma configuração em css ele não representa nada, mas podemos separar conteúdos dentro de um site que estamos criando. normalmente, as tags div ficam uma abaixo da outra no doc, então em css podemos configurar para deixar os elementos 'in-line', podemos alinhar os conteúdos  pelo "text-align".
+para trabalhar com pseudo-classes, usaremos um seletor especial como exemplo: " {div:hover}-(pseudo-classe), podemos inserir um background-color, porém essa cor só ficará visível quando passarmos o mouse por cima do conteúdo, isso serve muito bem para incluir links no conteúdo escolhido.
+o "hover" serve para iluminar uma div quando "flutuamos" com o mouse por cima do elemento no navegador
+as pseudo-classes são representadas por ":"
+para começar a entender como os menus "escondidos" dos sites funcionam, criaremos um <p> ou outro titulo de hierarquia DENTRO da tag <div>, seguido do caractere ">", dentro deste seletor colocaremos a declaração "display: none;", isso esconderá o texto, logo abaixo, criaremos um seletor "div:hover > p" seguido da declaração "display: block;

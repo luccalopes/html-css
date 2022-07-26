@@ -1,0 +1,48 @@
+para mexer com as fontes em css, precisamos fazer o mesmo esquema de inserir tipos diferentes de arquivos para determinados dispositivos, porém dessa vez, com nomes de fontes que sejam compatíveis em css.
+dentro da folha avulsa de css, iremos configurar a tag <body> para o seletor (declaração)"font-family". dentro deste seletor, iremos inserir o valor com o nome das fontes escolhidas , podemos escolher até 3.
+se quiser fontes sem serifa, é recomendado usar as fontes "Arial, Helvetica, sans-serif" pois são fontes que a maioria dos dispositivos irão ler. no caso da sans-serif-, o navegador irá escolher uma fonte aleatória que não seja serifada.
+se precisar de uma fonte com serifa, é recomendado usar fontes commo "Times-New-Roman", seguido de serif.
+se for fonte monoespaçada, basta escolher a fonte 'courier new, courier, monospace'
+existem vários tipos de medidas, sendo as absolutas e as relativas. as unicas que devemos usar segundo o prof. são as medidas px e em, a medida px padrão são 16px, para cada 16px temos 1em, se colocarmos 2em teremos 32px, ou seja, o dobro.
+para indicar o peso da fonte, usamos o seletor font-weight, com esse seletor nós escolhemos o quão "gorda" a fonte será, os valores aceitos serão lighter (magra), normal, bold (mais cheia) e bolder (bem gorda), também podemos usar as variações numéricas, que irá de 100 até 900, sendo mais versátil para escolher os tamanhos pois tem mais possibilidades, porém precisa ver se a fonte está disponível para a variação de peso.
+como as formatações em css são basicamente o assunto mais importante da linguagem, podemos usar seletores que funcionam como atalhos, chamados de shorthand.
+ao invés de ficar colocando várias declarações de fontes no seletor, nós colocaremos a shorthand que vai simplificar tudo, porém existe uma ordem de atributos a ser seguida:
+-font-style - 
+-font-variant
+-font-weight
+-font-size/line-height
+-font-family
+o seletor shorthand é apenas "font"
+para inserirmos fontes externas, podemos usar o google fonts para pesquisar uma fonte que não está instalada em nossa maquina, selecionaremos a fonte escolhida e clicaremos em "import", dentro do documento css, iremos inserir o código a partir de "@import". 
+no documento css, também colocaremos a "font-family" com o nome oficial do google fonts, esse nome aparecerá logo abaixo da caixa "import", em "CSS rules to specify families".
+para  inserir fontes baixadas de outro lugar que não seja o google fonts, iremos baixar o arquivo .otf ou .ttf na pasta do documento html que está sendo escrito. 
+iremos inserir no doc css a ORDEM "@font-face", da seguinte forma:
+@font-face {
+font-family: 'nome';
+src: url(pasta/nomedafonte.otf;
+font-weight: normal;
+font-style: normal;
+}
+depois de inserido como ordem no doc, basta escolher as tags do cod. html que desejemos que serão usadas na fonte escolhida, claro que sempre seguido de outra fonte que já existe na máquina se tudo der errado com a fonte baixada.
+para dar espaço no início dos parágrafos, usaremos a declaração "text-indent" seguido do valor em px escolhido para ser espaçado. o nome disso é indentação.
+nas css, quando escolhemos uma configuração para uma determidada tag, todas as outras tags que tiverem o mesmo nome irão tomar as configurações que você escolheu, então quando queremos configurar apenas um texto que está dentro de uma tag que existem outras mesmas tags no documento, usamos seletores especiais, identificadores, então ficará mais eficiente para configurar o título escolhido.
+os seletores identificadores são chamados de id, e colocaremos esse id dentro da tag escolhida no cod. html, ex: "<h1 id="principal"------</h1>
+
+para configurar esse id, usaremos o seletor especial com um # na frente, ex: #principal {------}, escolhendo as configurações para colocar apenas neste seletor
+tudo que em HTML é "id", em CSS será "#"
+tudo que em HTML é "class", em CSS será um ponto
+para usarmos pseudo -elementos, usaremos "::", exemplo: 
+"a::after" - indicará depois do link, que é um link, então usaremos a declaração "content", então basta procurar algum site que contenha os simbolos do HTML5 e escolher o simbolo desejado para inserir no "after" ou "before" no documento em CSS na área de pseudo-elementos.
+se for desejado apenas um link, criaremos uma "class" no link que está no doc html com o nome desejado, usaremos o nome "especial" como exemplo, então basta configurar a "class" especial como um pseudo-elemento, então essa configuração se aplicará apenas para a "class" escolhida.
+para aplicar as configurações de padding em shorthand, basta configurar em sentido horário os tamanhos de "top, right, bottom e left".
+para aplicar shorthand na declaração "border", basta inserir na ordem "width, style, color".
+para configurar apenas uma tag escolhida que está dentro de outra tag, usaremos o simbolo ">" como parte de um seletor para formatação em css, por exemplo: article > aside {}.
+para inserirmos um icone de "check" em listas, iremos configurar em css a tag "ul", iremos colocar a declaração "list-style-type: '\2714\0020';", o numero 2714 significa binariamente o simbolo "check", enquanto o que está depois da barra é para dar um espaçamento como se fosse um padding, para o simbolo não ficar muito colado com o texto.
+tornando um vídeo responsivo - enveloparemos o codigo fornecido pelo youtube dentro de uma <div class="video">, e então, no documento css, iremos inserir o seletor div.video, a seguir colocar uma cor de fundo neste seletor, criar uma margem de (0px -2-px 30px -2-px), um padding de 20px, um padding-botton de 50%,e position: relative;
+em seguida, criar outro seletor div.video > iframe, seguido das declarações:
+position: absolute;
+top: 5%;
+left: 5%;
+width: 90%;
+height: 90%
+
