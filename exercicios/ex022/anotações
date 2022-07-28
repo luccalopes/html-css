@@ -11,3 +11,5 @@ Para centralizar uma imagem de fundo, usaremos os seguintes seletores e declara�
             background-position: center center;
 
 Esta regra não se aplica apenas para centralizar alguma imagem, mas podemos também usar o 'background-position' para escolher a posição desejada, basta escolher o que for preciso.
+
+Para inserir a imagem de fundo de forma responsiva, iremos configurar a declaração 'height' para 100vh, e depois configurar a declaração 'background-position' para 'cover, isso fará com que a imagem não se achate conforme diminuímos ou aumentamos a tela, ou talvez usar em dispositivos como TV ou um celular, então a imagem se adaptará para o tamanho da tela do dispositivo usado, mesmo que a imagem tenha que ser cortada para tal.'
