@@ -1,0 +1,13 @@
+Para adicionar uma imagem de fundo em um documento CSS, iremos usar a declaração 'background-image' para o seletor desejado, seja body, div, main etc.
+Depois de inserir 'background-image', iremos inserir o valor 'url()', e dentro dos parênteses iremos colocar o caminho da imagem escolhida para ser o fundo do site ou em uma caixa isolada. Esta imagem pode estar dentro da nossa máquina, ou poderá ser uma imagem externa também, lembrando que se essa imagem sair do ar, ela não estará mais disponível no nosso site também.
+
+Para centralizar uma imagem de fundo, usaremos os seguintes seletores e declarações:
+
+            height: 100vh;
+            border: 1px dashed black;
+            background-image: url('');
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+Esta regra não se aplica apenas para centralizar alguma imagem, mas podemos também usar o 'background-position' para escolher a posição desejada, basta escolher o que for preciso.
