@@ -12,4 +12,14 @@ Para centralizar uma imagem de fundo, usaremos os seguintes seletores e declara�
 
 Esta regra não se aplica apenas para centralizar alguma imagem, mas podemos também usar o 'background-position' para escolher a posição desejada, basta escolher o que for preciso.
 
-Para inserir a imagem de fundo de forma responsiva, iremos configurar a declaração 'height' para 100vh, e depois configurar a declaração 'background-position' para 'cover, isso fará com que a imagem não se achate conforme diminuímos ou aumentamos a tela, ou talvez usar em dispositivos como TV ou um celular, então a imagem se adaptará para o tamanho da tela do dispositivo usado, mesmo que a imagem tenha que ser cortada para tal.'
+Para inserir a imagem de fundo de forma responsiva, iremos configurar a declaração 'height' para 100vh, e depois configurar a declaração 'background-position' para 'cover, isso fará com que a imagem não se achate conforme diminuímos ou aumentamos a tela, ou talvez usar em dispositivos como TV ou um celular, então a imagem se adaptará para o tamanho da tela do dispositivo usado, mesmo que a imagem tenha que ser cortada para tal.
+
+Para inserir efeito de video em uma caixa, iremos utilizar a seguinte configuração:
+
+            background-color: rgba( 255, 255, 255, 0.1);
+            backdrop-filter: blur( 10px );
+            -webkit-backdrop-filter: blur(10px);
+
+Obs: este efeito fica apenas legal com projetos que utilizem uma imagem de fundo.
+
+A shorthand para a declaração 'background' é posta na seguinte ordem: color, image, position, repeat, e attachment. No caso de 'background-size', a regra é feita para colocar na ordem entre 'repeat' e 'attachment', porém na prática não funciona desta maneira, então colocaremos 'background-size' à parte da shorthand.
