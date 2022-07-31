@@ -2,4 +2,6 @@
  Curso de HTML e CSS3
 
 
-<a href="https://luccalopes.github.io/html-css/desafios/des010/des010.html">Desafio do site Android do CursoEmVideo</a>
+<a href="https://luccalopes.github.io/projeto-android/">Desafio do site Android do CursoEmVideo</a>
+
+<a href="https://luccalopes.github.io/projeto-cordel/">Desafio do Cordel Moderno do CursoemVideo</a>
