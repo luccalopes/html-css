@@ -1,0 +1,9 @@
+HIERARQUIA DE TABELAS SIMPLES
+    TABLE = TABELA
+        TABLE ROW = linha de tabela 
+            TABLE HEADER = cabeçalho de tabela
+            TABLE DATA = dado de tabela
+Cada uma fica dentro da outra
+
+
+Para abrir um 'table row' iremos usar a tag <tr>, para abrir um 'table data', usaremos a tag 'td'
