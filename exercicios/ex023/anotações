@@ -7,3 +7,22 @@ Cada uma fica dentro da outra
 
 
 Para abrir um 'table row' iremos usar a tag <tr>, para abrir um 'table data', usaremos a tag 'td'
+
+
+Anatomia para tabelas grandes:
+
+    -table
+        
+        -thead
+        -tr> td, th
+        -tbody
+        -tr> td, th
+        -tfoot
+        -tr> td, th
+    -table
+
+Para usar uma dessas tags como título de uma coluna, iremos inserir a tag seguido do valor 'scope' com "col" entre as aspas.
+Para usar uma tag como título de uma linha, basta usar o 'scope' com "row" entre as aspas.
+
+Para criar um efeito zebrado em uma tabela, iremos utilizar uma pseudo-classe para a tag 'tr', iremos inseri-la da seguinte forma: tr:nth-child(), e dentro dos parênteses iremos escolher de quantas em quantas linhas é para pular o efeito zebrado, então basta configurar este seletor de pseudo-classe para um background-color escolhido que dê o contraste necessário.
+Também podemos usar dentro dos parênteses o valor "odd" que significa ímpar, então será aplicado apenas nas linhas ímpares.
