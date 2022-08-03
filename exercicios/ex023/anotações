@@ -38,3 +38,25 @@ Para manter um cabeçalho de uma tabela, basta usar as seguintes configurações
 
 Para fazer uma mesclagem de células em colunas, basta ir no código html e, na célula escolhida, colocar - <td'colspan="2"></td>' e isso fará com quem automaticamente a célula ocupe 2 colunas da tabela.
 Já para fazer uma mesclagem de células que ocupem linhas, basta usar o complemento 'rowspan' para fazer a célula ocupar 2 ou mais linhas
+
+Para fazer agrupamento de colunas com 'colgroup', precisaremos abrir uma tag <colgroup> dentro da tag 'table', acima da tag 'caption'. Então será necessário abrir tags 'col' dentro da tag 'colgroup', então configurar cada 'col' com uma classe que deve começar com a letra C. Isso se aplica à necessidade de inserir escopos em tags 'th', pois o escopo servirá como uma classe para ser configurada no código CSS. Por exemplo:
+
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="csexo">
+            <col class="cidade">
+            <col class="cprof">
+        </colgroup>
+        <caption></caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+
+
+Também podemos aplicar isso para um grupo de colunas, substituindo o que estiver dentro do valor de class entre parênteses por 'cgroup', depois aplicar o valor 'span' na mesma tag e selecionar o mesmo número de configurações a serem substituídas por 'cgroup'.
+
+Para tornar uma tabela responsiva, basta apenas envelopar a tabela por inteira e colocar dentro de uma 'div' e dar um id para essa 'div' de 'container'. Dentro do documento CSS, estilizar a div#id para a declaração 'overflow: auto;' e isso fará com que o site não quebre pra uma rolagem lateral por causa da tabela.
